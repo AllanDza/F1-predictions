@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Predictor</title>
+</head>
+<body>
+    <div style="position: relative; overflow: hidden;">
+        <!-- Video background with a fallback image -->
+        <video autoplay loop muted playsinline poster="C:\Users\Allan\Desktop\F1 prdedition\Formula 1 Car in Super Slow Motion _ Cinematic FPV.mp4" style="width: 100%; height: auto;">
+            <source src="C:/Users/Allan/Desktop/F1 prdedition/Formula 1 Car in Super Slow Motion _ Cinematic FPV.mp4" type="video/mp4">
+        </video>
+
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: #fff;">
+            <!-- Your website content goes here -->
+            <div class="container">
+                <h1 style="text-align: center; font-size: 55px;">Formula 1 Predictor</h1>
+            </div>
+
+            <!-- Form and other elements go here -->
+            <div class="container">
+                <form action="/predict" method="POST">`
+                    <!-- Driver dropdown -->
+                    <label for="driver"></label>
+                    <select class="form-control" name="driver" id="driver_list" required="required" autofocus>
+                        <!-- Add driver options here -->
+                    </select>
+
+                    <br>
+
+                    <!-- Constructor dropdown -->
+                    <label for="constructor"></label>
+                    <select class="form-control" name="constructor" id="constructor_list" required="required" autofocus>
+                        <!-- Add constructor options here -->
+                    </select>
+
+                    <br>
+
+                    <!-- Grid dropdown -->
+                    <label for="grid"></label>
+                    <select class="form-control" name="grid" id="Quali" required="required" autofocus>
+                        <!-- Add grid options here -->
+                    </select>
+
+                    <br>
+
+                    <!-- Circuit dropdown -->
+                    <label for="circuit"></label>
+                    <select class="form-control" name="circuit" id="Circuits" required="required" autofocus>
+                        <!-- Add circuit options here -->
+                    </select>
+
+                    <br>
+
+                    <!-- Predict button -->
+                    <button type="submit" class="btn btn-primary btn-block">Predict</button>
+                </form>
+            </div>
+
+            <!-- Bootstrap link -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+            <!-- Prediction element goes here -->
+            <div class="d-flex justify-content-center">
+                <div class="p-2 bg-info">
+                    <h2 style="text-align: center; font-size: 40px; font-style: optima;"><b>{{prediction}}</b></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
